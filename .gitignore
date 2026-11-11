@@ -1,0 +1,15 @@
+# Jupyter / Colab
+.ipynb_checkpoints/
+
+# 作業系統
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 編輯器
+.vscode/
+.idea/
+
+# 本機工作檔（不發布）
+_work/
+*.tmp
