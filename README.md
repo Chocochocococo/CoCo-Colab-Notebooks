@@ -12,10 +12,11 @@ Google Colab notebooks for running open-source AI video and music generation mod
 |---|---|---|
 | `MiniMax_H3_zhTW.ipynb` | MiniMax H3 video generation on a ComfyUI backend. Can be driven from Colab forms, a Gradio panel, or a JSON batch file. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Chocochocococo/CoCo-Colab-Notebooks/blob/main/MiniMax_H3_zhTW.ipynb) |
 | `YuE2_AutoLRC_zhTW.ipynb` | YuE2 song generation with batch generation, seed management, automatic LRC lyric timestamps and MP3 export. Can be driven from Colab forms or a Gradio panel. The panel can plan the score first, let you edit it, then generate, and it shows an estimated length for the score. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Chocochocococo/CoCo-Colab-Notebooks/blob/main/YuE2_AutoLRC_zhTW.ipynb) |
+| `ACE-Step_1.5_XL_AutoLRC_zhTW.ipynb` | ACE-Step 1.5 song generation using the highest-quality XL (4B DiT) + 4B LM combination, with batch generation, seed management, LRC lyric timestamps (ACE-Step's built-in alignment or Whisper) and MP3 export. Can be driven from Colab forms or a Gradio panel. The panel can have the LM plan the BPM, key, time signature and length first, let you edit them, then generate. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Chocochocococo/CoCo-Colab-Notebooks/blob/main/ACE-Step_1.5_XL_AutoLRC_zhTW.ipynb) |
 
 ## Before you start
 
-- **A paid Colab GPU is required.** Both models need an L4 or A100 class GPU. The free T4 is not practical.
+- **A paid Colab GPU is required.** These models need an L4 or A100 class GPU (an A100 is recommended for ACE-Step XL). The free T4 is not practical.
 - **Google Drive space is required.** Models are cached in your Drive so they are not downloaded again every session. Each notebook states roughly how much space it needs at the top.
 - **Free Colab and the Gradio panels.** Colab does not allow free runtimes to be used mainly through a web UI, so a session using a Gradio panel may be disconnected. Paid plans with a positive compute unit balance are not affected.
 - **Disconnect when you are done.** A running runtime keeps consuming compute units. Use "Runtime → Disconnect and delete runtime" when you finish.
@@ -30,12 +31,13 @@ Google Colab notebooks for running open-source AI video and music generation mod
 
 - `MiniMax_H3_zhTW.ipynb` is modified from `MiniMax-H3_ComfyUI_Colab.ipynb` in [Skquark/AEI-Colab-Notebooks](https://github.com/Skquark/AEI-Colab-Notebooks) (MIT License, Copyright (c) 2026 Skquark). The original license text is kept inside that notebook.
 - `YuE2_AutoLRC_zhTW.ipynb` uses [ijuinryukichi/lyric-align](https://github.com/ijuinryukichi/lyric-align) (MIT License) for LRC lyric timestamps. It is installed with `pip` at runtime; this repository does not contain its code.
+- `ACE-Step_1.5_XL_AutoLRC_zhTW.ipynb` installs [ACE-Step 1.5](https://github.com/ace-step/ACE-Step-1.5) from the official repository at runtime, and uses lyric-align when the Whisper LRC option is selected. This repository does not contain their code.
 
 ## License
 
 The notebook code in this repository is released under the [MIT License](LICENSE).
 
-MIT covers the notebook code only. Model weights (MiniMax H3, YuE2, Whisper and others) are not included in this repository and each has its own license terms. Check them before use, especially for commercial use.
+MIT covers the notebook code only. Model weights (MiniMax H3, YuE2, ACE-Step, Whisper and others) are not included in this repository and each has its own license terms. Check them before use, especially for commercial use.
 
 ## Disclaimer
 
